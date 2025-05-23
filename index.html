@@ -13,8 +13,13 @@
             color: #e0e7ff; /* Warna teks terang */
         }
         /* Custom gradient for hero section */
+        /* Menggabungkan gradient dan gambar bulan sebagai latar belakang */
         .hero-gradient {
-            background: linear-gradient(180deg, #0b0f1a 0%, #1a202c 100%);
+            /* Gradient di lapisan atas, gambar bulan di lapisan bawah */
+            background-image: linear-gradient(180deg, #0b0f1a 0%, #1a202c 100%), url('bulan.jpg');
+            background-size: cover, cover; /* Keduanya menutupi area */
+            background-position: top center, bottom center; /* Gradient dari atas, gambar dari bawah */
+            background-repeat: no-repeat; /* Tidak mengulang gambar */
         }
         /* Custom glow effect for buttons */
         .btn-glow {
@@ -77,10 +82,7 @@
                     Pelajari Lebih Lanjut
                 </a>
             </div>
-            <div class="mt-16">
-                <img src="bulan.jpg" alt="Gambar Bulan yang Indah" class="mx-auto rounded-full shadow-2xl w-96 h-auto">
             </div>
-        </div>
     </section>
 
     <section id="about" class="py-20 px-4 bg-gray-900">
